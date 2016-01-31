@@ -514,6 +514,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
     CBitcoinAddress address(!fTestNet ? FOUNDATION : FOUNDATION_TEST);
     result.push_back(Pair("payee", address.ToString()));
     result.push_back(Pair("payee_amount", devCoin));
+    result.push_back(Pair("enforced", true));
     return result;
 }
 
